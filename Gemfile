@@ -5,19 +5,23 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'kaminari'
+#pagination
 gem'faker'
-
+#generate fake data base
 gem 'clearance'
-
+#CRUD pathways
 gem 'byebug'
-
+#debugging
 gem 'figaro'
 #encryption
 gem 'omniauth'
-#
+#authentication
 gem 'omniauth-facebook'
-#
+#authentication(facebook)
 gem "omniauth-google-oauth2", "~> 0.2.1"
+#authentication(google)
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record

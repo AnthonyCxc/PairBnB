@@ -6,6 +6,7 @@
   <table>
   	<thead>
   		<tr>
+        <th>ID</th>
   			<th>Title</th>
   			<th>Description</th>
   			<th>Country</th>
@@ -20,6 +21,7 @@
   	<tbody>
   		<% @listings.each do |listing|%>
   		<tr>
+        <td><%= listing.id %></td>
   			<td><%= link_to listing.title,listing%></td>
   			<td><%= listing.description %></td>
   			<td><%= listing.country %></td>
@@ -32,3 +34,8 @@
   		<% end %>
   	</tbody>
   </table>
+
+  
+  <%= link_to "Prev",listings_path(:page => @prev_page) %>
+  <%= link_to "Next",listings_path(:page => @next_page) %>
+  

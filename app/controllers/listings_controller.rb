@@ -3,7 +3,12 @@ class ListingsController < ApplicationController
 
   def index
     # current_user.listings
-    @listings = Listing.all
+    @page = params[:page].to_i
+    @prev_page = @page - 1 unless @page == 0
+    @next_page = @page + 1 unless (@page * 10 > Listing.count)
+    @listings = Listing.limit(10).offset(@page * 10).order(created_at: :DESC)
+    #limit the listings per page
+    # @listings = Listing.order(:name).page params[:page]
   end
 
   def new
