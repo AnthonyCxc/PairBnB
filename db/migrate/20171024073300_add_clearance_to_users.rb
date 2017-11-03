@@ -5,6 +5,7 @@ class AddClearanceToUsers < ActiveRecord::Migration[5.1]
       t.string :encrypted_password, limit: 128
       t.string :confirmation_token, limit: 128
       t.string :remember_token, limit: 128
+      t.string :name, null: false
     end
 
     add_index :users, :email

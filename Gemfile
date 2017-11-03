@@ -5,9 +5,19 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'omniauth'
-gem 'omniauth-facebook'
+gem'faker'
+
 gem 'clearance'
+
+gem 'byebug'
+
+gem 'figaro'
+#encryption
+gem 'omniauth'
+#
+gem 'omniauth-facebook'
+#
+gem "omniauth-google-oauth2", "~> 0.2.1"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record

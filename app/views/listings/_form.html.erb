@@ -1,23 +1,32 @@
 <%= form_for @listing do |f| %>
-  <div>
-    <%= f.label :country %>
-    <%= f.text_field :country %>
-  </div>
-  <div>
-    <%= f.label :state_or_province %>
-    <%= f.text_field :state_or_province %>
-  </div>
-  <div>
-    <%= f.label :address %>
-    <%= f.text_field :address %>
-  </div>
-  <div>
-    <%= f.label :number_of_guests %>
-    <%= f.text_field :number_of_guests %>
-  </div>
-  <div>
-    <%= f.label :price_per_night %>
-    <%= f.text_field :price_per_night %>
-  </div>
-    <%= f.submit "Submit" %>
+<div>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+<div>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+</div>
+<div>
+  <%= f.label :country %>
+  <%= f.text_area :country %>
+</div>
+<div>
+  <%= f.label :state_or_province %>
+  <%= f.text_area :state_or_provinces %>
+</div>
+<div>
+  <%= f.label :address %>
+  <%= f.text_area :address %>
+</div>
+<div>
+  <%= f.label :number_of_guests %>
+  <%= f.number_field :number_of_guests %>
+</div>
+<div>
+  <%= f.label :price_per_night %>
+  <%= f.number_field :price_per_night %>
+</div>
+<%= f.submit "submit" %>
+<%= @error if @error %>
 <% end %>

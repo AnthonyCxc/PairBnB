@@ -1,7 +1,34 @@
-<%= link_to "Create New Listing", new_listing_path %>
-<table>
-  <% @listings.each do |listing| %>
-  <tr>
-    <td><%= link_to listing.title, listing%></td>
-  </tr>
-</table>
+<h1>Listings#index</h1>
+<p>Clearance Test Listing</p>
+<%= render partial: "layouts/navigation" %>
+
+<h1>Listings</h1>
+  <table>
+  	<thead>
+  		<tr>
+  			<th>Title</th>
+  			<th>Description</th>
+  			<th>Country</th>
+  			<th>State/province</th>
+  			<th>Address</th>
+  			<th></th>
+  			<th></th>
+  			<th></th>
+  		</tr>
+  	</thead>
+
+  	<tbody>
+  		<% @listings.each do |listing|%>
+  		<tr>
+  			<td><%= link_to listing.title,listing%></td>
+  			<td><%= listing.description %></td>
+  			<td><%= listing.country %></td>
+  			<td><%= listing.state_or_province %></td>
+  			<td><%= listing.address %></td>
+  			<td><%= link_to'show',listing %></td>
+  			<td><%# %></td>
+  			<td><%# %></td>
+  		</tr>
+  		<% end %>
+  	</tbody>
+  </table>
