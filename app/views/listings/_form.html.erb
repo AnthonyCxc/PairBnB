@@ -1,0 +1,23 @@
+<%= form_for @listing do |f| %>
+  <div>
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+  <div>
+    <%= f.label :state_or_province %>
+    <%= f.text_field :state_or_province %>
+  </div>
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div>
+    <%= f.label :number_of_guests %>
+    <%= f.text_field :number_of_guests %>
+  </div>
+  <div>
+    <%= f.label :price_per_night %>
+    <%= f.text_field :price_per_night %>
+  </div>
+    <%= f.submit "Submit" %>
+<% end %>
