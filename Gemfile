@@ -5,6 +5,16 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'jquery-rails'
+#
+gem 'bootstrap-sass', '~> 3.2.0'
+#
+gem 'autoprefixer-rails'
+#
+gem 'braintree'
+#
+gem "rails_admin"
+#
 gem 'kaminari'
 #pagination
 gem'faker'
@@ -55,6 +65,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'rspec-rails', '~> 3.7.0'
 end
 
 group :development do
