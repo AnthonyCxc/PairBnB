@@ -13,7 +13,7 @@
 </div>
 <div>
   <%= f.label :state_or_province %>
-  <%= f.text_area :state_or_provinces %>
+  <%= f.text_area :state_or_province %>
 </div>
 <div>
   <%= f.label :address %>
@@ -27,6 +27,11 @@
   <%= f.label :price_per_night %>
   <%= f.number_field :price_per_night %>
 </div>
+<div>
+  <%= f.label :photos %>
+  <%= f.file_field :photos, multiple: true %>
+</div>
+
 <%= f.submit "submit" %>
 <%= @error if @error %>
 <% end %>

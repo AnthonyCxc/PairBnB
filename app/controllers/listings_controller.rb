@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
   before_action :require_login
-
+  
   def index
     # current_user.listings
     @page = params[:page].to_i
@@ -26,6 +26,7 @@ class ListingsController < ApplicationController
   private
     def listing_params
       params.require(:listing).permit(:title,:description,:country, :state_or_province,
-      :address, :number_of_guests, :price_per_night)
+      :address, :number_of_guests, :price_per_night,{avatars: []})
     end
 end
+
